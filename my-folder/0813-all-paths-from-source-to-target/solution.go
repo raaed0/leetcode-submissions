@@ -6,6 +6,7 @@ func allPathsSourceTarget(graph [][]int) [][]int {
             tmp := make([]int, len(path))
             copy(tmp, path)
             res = append(res, tmp)
+            return
         }
         for _, nd := range graph[node] {
             dfs(nd, append(path, nd))
